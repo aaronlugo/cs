@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CS| Control System</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <link type="text/css" rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="global/vendors/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/simple-line-icons/simple-line-icons.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/animate.css/animate.css">
+    <link type="text/css" rel="stylesheet" href="global/vendors/iCheck/skins/all.css">
+    
+    <link type="text/css" rel="stylesheet" href="assets/vendors/google-code-prettify/prettify.css">
+    <link type="text/css" rel="stylesheet" href="" id="font-layout">
+    <link type="text/css" rel="stylesheet" href="assets/vendors/jquery-jvectormap/jquery-jvectormap-2.0.1.css">
+    <link type="text/css" rel="stylesheet" href="global/css/core.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/system.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/system-responsive.css">
+</head>
+<body class="sidebar-color-grey font-source-sans-pro"><!--Modal Default-->
+<div id="source-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 id="modal-default-label" class="modal-title">View Code</h4></div>
+            <div class="modal-body">
+                <pre class="prettyprint linenums"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fluid"><!--BEGIN TEMPLATE SETTING-->
+    <div class="hidden-xs hidden-sm">
+        <div id="template-setting">
+            <div class="content-template-setting">
+                <button id="save-setting" class="btn btn-success btn-sm pull-right">Save Change</button>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Header theme</h5>
+
+                <div class="pull-right">
+                    <div id="setting-header-dark" data-on="info" data-off="default" data-on-label="Dark"
+                         data-off-label="Light" class="make-switch switch-small"><input type="checkbox" class="switch"/>
+                    </div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5>Sidebar Colors</h5>
+                <ul class="sidebar-color list-unstyled list-inline">
+                    <li data-style="grey" class="grey-blue active"></li>
+                    <li data-style="default" class="grey"></li>
+                    <li data-style="blue" class="blue"></li>
+                    <li data-style="green" class="green"></li>
+                    <li data-style="orange" class="orange"></li>
+                    <li data-style="white" class="white"></li>
+                </ul>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Font</h5>
+
+                <div class="pull-right"><select id="font-select" class="mts">
+                    <option value="source-sans-pro">Source Sans Pro</option>
+                    <option value="open-sans">Open Sans</option>
+                    <option value="roboto">Roboto</option>
+                    <option value="lato">Lato</option>
+                    <option value="lora">Lora</option>
+                    <option value="helvetica">Helvetica Neue</option>
+                </select></div>
+                <div class="mbm clearfix"></div>
+                <hr/>
+                <h5 class="pull-left">Header Fixed</h5>
+
+                <div class="pull-right">
+                    <div id="setting-header-fixed" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Sidebar Collapsed</h5>
+
+                <div class="pull-right">
+                    <div id="setting-sidebar-collapsed" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Sidebar Show/Hide</h5>
+
+                <div class="pull-right">
+                    <div id="setting-sidebar-hide" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Sidebar Fixed</h5>
+
+                <div class="pull-right">
+                    <div id="setting-sidebar-fixed" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Toggle Button<i data-hover="tooltip" data-placement="top"
+                                                      title="Switch it then click toogle button on topbar"
+                                                      class="fa fa-info-circle mls"></i></h5>
+
+                <div class="pull-right">
+                    <div id="setting-toggle-status" data-on="success" data-off="default" data-on-label="Hide"
+                         data-off-label="Mini" class="make-switch switch-small"><input type="checkbox" class="switch"/>
+                    </div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <hr/>
+                <h5 class="pull-left">Logo mode</h5>
+
+                <div class="pull-right">
+                    <div id="setting-logo-status" data-on="success" data-off="default" data-on-label="Aside"
+                         data-off-label="Top" class="make-switch switch-small"><input type="checkbox" class="switch"/>
+                    </div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Layout Boxed</h5>
+
+                <div class="pull-right">
+                    <div id="setting-layout-boxed" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+                <h5 class="pull-left">Menu Horizontal</h5>
+
+                <div class="pull-right">
+                    <div id="setting-horizontal-menu" data-on="success" data-off="default"
+                         class="make-switch switch-small"><input type="checkbox" class="switch"/></div>
+                </div>
+                <div class="mbm clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--END TEMPLATE SETTING--><!--BEGIN TOPBAR-->
+    <div class="page-header-topbar">
+        <nav id="topbar" role="navigation" class="navbar navbar-default container pln prn">
+            <div class="container-fluid pln prn">
+                <div id="topbar-menu" class="navbar-collapse pln prn">
+                    <ul class="nav navbar-nav logo-wrapper">
+                        <li class="btn-menu-toggle">
+                            <div id="menu-toggle" class="show-collapsed"><i class="fa fa-bars"></i></div>
+                        </li>
+                        <li class="pull-left"><a id="logo" href="index.html" class="pan"><img
+                                src="assets/images/logo2.png"/></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left topbar-nav">
+                        <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i
+                                class="icon-calendar"></i><span class="badge badge-primary">1</span></a>
+                            <ul class="dropdown-menu dropdown-task dropdown-topbar">
+                                <li><p>You have 1 new tasks</p></li>
+                                <li>
+                                    <div class="dropdown-slimscroll">
+                                        <ul>
+                                            <li class="unread"><a href="#" target="_blank">Lorem ipsum dolor sit
+                                                amet<span class="label label-success pull-right">Html</span><br/><span
+                                                        class="text-muted small">4 mins ago</span></a></li>
+                                            <li><a href="#" target="_blank">Consectetur adipiscing<span
+                                                    class="label label-info pull-right">CSS</span><br/><span
+                                                    class="text-muted small">12 mins ago</span></a></li>
+                                            <li><a href="#" target="_blank">Tempor incididunt ut<span
+                                                    class="label label-warning pull-right">Javascript</span><br/><span
+                                                    class="text-muted small">15 mins ago</span></a></li>
+                                            <li><a href="#" target="_blank">Ut enim ad minim<span
+                                                    class="label label-default pull-right">Fix Bug</span><br/><span
+                                                    class="text-muted small">18 mins ago</span></a></li>
+                                            <li><a href="#" target="_blank">Sed ut perspiciatis unde omnis<span
+                                                    class="label label-success pull-right">Html</span><br/><span
+                                                    class="text-muted small">2 days ago</span></a></li>
+                                            <li><a href="#" target="_blank">Sed quia non numquam<span
+                                                    class="label label-info pull-right">CSS</span><br/><span
+                                                    class="text-muted small">2 days ago</span></a></li>
+                                            <li><a href="#" target="_blank">Lorem ipsum dolor sit<span
+                                                    class="label label-default pull-right">Fix Bug</span><br/><span
+                                                    class="text-muted small">5 days ago</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="last"><a href="extra-user-list.html" class="text-right">See all alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i
+                                class="icon-bell"></i><span
+                                data-pulsate="{parent:true,onClick:'stop',border:false,speed:800,reach: 20,delay:5000}"
+                                class="badge badge-success">2</span></a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li><p>You have 2 new notifications</p></li>
+                                <li>
+                                    <div class="dropdown-slimscroll">
+                                        <ul>
+                                            <li class="unread"><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-info"><i class="fa fa-comment"></i></span>New
+                                                Comment<span class="pull-right text-muted small">4 mins ago</span></a>
+                                            </li>
+                                            <li class="unread"><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-success"><i class="fa fa-twitter"></i></span>3
+                                                New Followers<span
+                                                        class="pull-right text-muted small">12 mins ago</span></a></li>
+                                            <li><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-warning"><i class="fa fa-envelope"></i></span>Message
+                                                Sent<span class="pull-right text-muted small">15 mins ago</span></a>
+                                            </li>
+                                            <li><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-success"><i class="fa fa-tasks"></i></span>New
+                                                Task<span class="pull-right text-muted small">18 mins ago</span></a>
+                                            </li>
+                                            <li><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-danger"><i class="fa fa-upload"></i></span>Server
+                                                Rebooted<span class="pull-right text-muted small">19 mins ago</span></a>
+                                            </li>
+                                            <li><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-success"><i class="fa fa-tasks"></i></span>New
+                                                Task<span class="pull-right text-muted small">2 days ago</span></a></li>
+                                            <li><a href="extra-user-list.html" target="_blank"><span
+                                                    class="label label-warning"><i class="fa fa-envelope"></i></span>Message
+                                                Sent<span class="pull-right text-muted small">5 days ago</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="last"><a href="extra-user-list.html" class="text-right">See all alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i
+                                class="icon-user"></i>&nbsp;<span class="caret"></span></a>
+                          <ul class="dropdown-menu dropdown-user pull-right">
+                              <li>
+                                  <div class="navbar-content">
+                                      <div class="row">
+                                          <div class="col-md-5 col-xs-5"><img
+                                                    src="assets/images/perfil.jpg" alt=""
+                                                    class="img-responsive img-circle"/>
+
+                                              <p class="text-center mtm"><a href="#" class="change-avatar">
+                                                  <small>Ver Avatar</small>
+                                              </a></p>
+                                          </div>
+                                          <div class="col-md-7 col-xs-5"><span>Alberto Calderon</span>
+
+                                              <p class="text-muted small">alberto@studiomedia.com.mx</p>
+
+                                              <div class="divider"></div>
+                                              <a href="#">
+                                                  <button href="#" class="btn btn-default btn-sm">Editar Perfil
+                                                  </button>
+                                              </a></div>
+                                      </div>
+                                  </div>
+                                  <div class="navbar-footer">
+                                      <div class="navbar-footer-content">
+                                          <div class="row">
+                                              <div class="col-md-6 col-xs-6"><a href="#">
+                                                  <button class="btn btn-default btn-sm">Cambiar Password</button>
+                                              </a></div>
+                                              <div class="col-md-6 col-xs-6"><a href="#">
+                                                  <button href="page-lock-screen.html"
+                                                            class="btn btn-info btn-sm pull-right">Salir                                                  </button>
+                                              </a></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--END TOPBAR--><!--BEGIN HORIZONTAL MENU-->
+    <div class="page-horizontal-menu">
+        <div id="horizontal-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><i class="icon-home"></i><span
+                        class="menu-title">Dashboard</span></a></li>
+                <li><a href="page_profile.html"><i class="icon-user"></i><span
+                        class="menu-title">User Profile</span></a></li>
+                <li><a href="page_mail.html"><i class="icon-envelope"></i><span class="menu-title">Mail Box</span></a>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i
+                        class="icon-screen-desktop"></i><span class="menu-title">Layouts</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout_full_width.html"><span class="submenu-title">Full width</span></a></li>
+                        <li><a href="layout_boxed.html"><span class="submenu-title">Boxed</span></a></li>
+                        <li class="hidden-sm"><a href="layout_sidebar_collapsed.html"><span class="submenu-title">Sidebar Collapsed</span></a>
+                        </li>
+                        <li class="hidden-sm"><a href="layout_sidebar_fixed.html"><span class="submenu-title">Sidebar fixed</span></a>
+                        </li>
+                        <li class="hidden-sm"><a href="layout_sidebar_collapsed_fixed.html"><span class="submenu-title">Sidebar collapsed & fixed</span></a>
+                        </li>
+                        <li><a href="layout_horizontal_menu.html"><span class="submenu-title">Horizontal Menu</span></a>
+                        </li>
+                        <li><a href="layout_header_fixed.html"><span class="submenu-title">Header Fixed</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i
+                        class="icon-magic-wand"></i><span class="menu-title">UI Elements</span><span
+                        class="badge badge-danger">3</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ui_general.html"><span class="submenu-title">General</span><span
+                                class="badge badge-success">10</span></a></li>
+                        <li><a href="ui_buttons.html"><span class="submenu-title">Buttons</span></a></li>
+                        <li><a href="ui_typography.html"><span class="submenu-title">Typography</span></a></li>
+                        <li><a href="ui_tabs_accordions.html"><span class="submenu-title">Tabs & Accordions</span></a>
+                        </li>
+                        <li><a href="ui_modals.html"><span class="submenu-title">Modals</span></a></li>
+                        <li><a href="ui_treeview.html"><span class="submenu-title">Tree view</span></a></li>
+                        <li><a href="ui_icons.html"><span class="submenu-title">Icons</span></a></li>
+                        <li><a href="ui_panels.html"><span class="submenu-title">Panels</span></a></li>
+                        <li><a href="ui_nestable_list.html"><span class="submenu-title">Nestable List</span></a></li>
+                        <li><a href="ui_toastr.html"><span class="submenu-title">Toastr Notifications</span></a></li>
+                        <li><a href="ui_datepaginator.html"><span class="submenu-title">Date Paginator</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i class="icon-note"></i><span
+                        class="menu-title">Forms</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="form_components.html"><span class="submenu-title">Form Component</span><span
+                                class="label label-info">8</span></a></li>
+                        <li><a href="form_wizard.html"><span class="submenu-title">Form Wizard</span></a></li>
+                        <li><a href="form_validation.html"><span class="submenu-title">Form Validation</span></a></li>
+                        <li><a href="form_select.html"><span class="submenu-title">Dropdown & Select</span></a></li>
+                        <li><a href="form_picker.html"><span class="submenu-title">Picker</span></a></li>
+                        <li><a href="form_editor.html"><span class="submenu-title">Editor</span></a></li>
+                        <li><a href="form_dropzone.html"><span class="submenu-title">Dropzone File Upload</span></a>
+                        </li>
+                        <li><a href="form_multiple_file_upload.html"><span
+                                class="submenu-title">Multiple File Upload</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i class="icon-grid"></i><span
+                        class="menu-title">Tables</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="table_basic.html"><span class="submenu-title">Basic table</span></a></li>
+                        <li><a href="table_responsive.html"><span class="submenu-title">Responsive table</span></a></li>
+                        <li><a href="table_advanced.html"><span class="submenu-title">Advanced table</span></a></li>
+                        <li><a href="table_treegrid.html"><span class="submenu-title">Treegrid table</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i
+                        class="icon-book-open"></i><span class="menu-title">Pages</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="page_gallery.html"><span class="submenu-title">Gallery</span></a></li>
+                        <li><a href="page_calendar.html"><span class="submenu-title">Calendar</span></a></li>
+                        <li><a href="page_invoice.html"><span class="submenu-title">Invoice</span></a></li>
+                        <li><a href="page_pricing_table.html"><span class="submenu-title">Pricing Table</span></a></li>
+                        <li><a href="page_search.html"><span class="submenu-title">Search</span></a></li>
+                        <li><a href="page_signin.html"><span class="submenu-title">Sign in</span></a></li>
+                        <li><a href="page_signup.html"><span class="submenu-title">Sign up</span></a></li>
+                        <li><a href="page_lock_screen.html"><span class="submenu-title">Lock screen</span></a></li>
+                        <li><a href="page_404.html"><span class="submenu-title">Page 404</span></a></li>
+                        <li><a href="page_500.html"><span class="submenu-title">Page 500</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" data-hover="dropdown" class="dropdown-toggle"><i
+                        class="icon-bar-chart"></i><span class="menu-title">Chart</span><span
+                        class="badge badge-warning">8</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="charts_chartjs.html"><span class="submenu-title">ChartJs</span></a></li>
+                        <li><a href="charts_flot.html"><span class="submenu-title">Flot Charts</span></a></li>
+                        <li><a href="charts_sparklines.html"><span class="submenu-title">Sparklines Charts</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--END HORIZONTAL MENU-->
+    <div id="wrapper"><!--BEGIN PAGE WRAPPER-->
+        <div id="page-wrapper"><!--BEGIN SIDEBAR MAIN-->
+            <div class="sidebar-main sidebar">
+                <div class="sidebar-collapse sidebar-scroll">
+                    <ul id="sidebar-main" class="nav">
+                        
+                        <li class="sidebar-hide"><h4 class="sidebar-title-section">Menu</h4></li>
+                        <li class="active"><a href="index.html"><i class="icon-home"></i><span class="menu-title">Inicio</span></a>
+                        </li>
+                        <li><a href="perfil.html"><i class="icon-user"></i><span class="menu-title">Mi Perfil</span></a></li>
+                        
+                         <li><a href="page_profile.html"><i class="icon-calendar"></i><span class="menu-title">Calendario</span></a></li>
+                        
+                       
+                        <li><a href="#"><i class="icon-users"></i><span
+                                class="menu-title">Usuarios</span><span class="arrow"></span></a></li>
+                        
+                        
+                        <li><a href="empleados.html"><i class="icon-wrench"></i><span class="menu-title">Empleados</span><span
+                                class="arrow"></span></a>
+                            
+                        </li>
+                        <li><a href="#"><i class="icon-speedometer"></i><span class="menu-title">Cuadrillas</span><span
+                                class="arrow"></span></a>
+                            
+                        </li>
+                        <li><a href="#"><i class="icon-list"></i><span class="menu-title">Ordenes</span><span
+                                class="arrow"></span></a>
+                            
+                        </li>
+                        <li><a href="#"><i class="icon-user-following"></i><span class="menu-title">Clientes</span><span
+                                class="arrow"></span></a>
+                           
+                        </li>
+                        <li><a href="#"><i class="icon-bar-chart"></i><span class="menu-title">Reportes</span><span
+                                class="arrow"></span></a>
+                           
+                        </li>
+                        <li><a href="#"><i class="icon-book-open"></i><span class="menu-title">Mapa</span><span
+                                class="arrow"></span></a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--END SIDEBAR MAIN--><!--BEGIN CHAT FORM-->
+            <div class="chat-form-wrapper">
+                <div id="chat-form">
+                    <div class="chat-inner"><h2 class="chat-header"><a href="javascript:;"
+                                                                       class="chat-form-close pull-right"><i
+                            class="fa fa-times"></i></a><i class="fa fa-user"></i>&nbsp;
+                        Active Chat
+                        &nbsp;<span class="badge badge-success">5</span></h2>
+
+                        <div id="group-1" class="chat-group"><h4 class="group-title">Recently</h4><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg"
+                                class="avt"/><span class="user-status is-online"></span>
+                            <small>Judy Russell</small>
+                            <span class="badge badge-info">2</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/48.jpg" class="avt"/><span
+                                class="user-status is-online"></span>
+                            <small>Eugene Turner</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/48.jpg" class="avt"/><span
+                                class="user-status is-busy"></span>
+                            <small>Ann Porter</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/jackmcdade/48.jpg"
+                                class="avt"/><span class="user-status is-idle"></span>
+                            <small>Benjamin Howell</small>
+                            <span class="badge badge-info is-hidden">0</span></a></div>
+                        <div id="group-2" class="chat-group"><h4 class="group-title">Work</h4><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/oliveirasimoes/48.jpg" class="avt"/><span
+                                class="user-status is-busy"></span>
+                            <small>Lawrence Larson</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg"
+                                class="avt"/><span class="user-status is-offline"></span>
+                            <small>Jacqueline Howell</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/jackmcdade/48.jpg"
+                                class="avt"/><span class="user-status is-offline"></span>
+                            <small>Andrew Brewer</small>
+                            <span class="badge badge-info">1</span></a></div>
+                        <div id="group-3" class="chat-group"><h4 class="group-title">Friends</h4><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg"
+                                class="avt"/><span class="user-status is-online"></span>
+                            <small>Marilyn Romero</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/48.jpg" class="avt"/><span
+                                class="user-status is-busy"></span>
+                            <small>Philip Hall</small>
+                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><img
+                                src="https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/48.jpg" class="avt"/><span
+                                class="user-status is-offline"></span>
+                            <small>Gary Wells</small>
+                            <span class="badge badge-info is-hidden">0</span></a></div>
+                        <div class="chat-theme-setting text-right">
+                            <div id="setting-theme-chat" data-on-label="dark" data-off-label="light"
+                                 class="make-switch"><input type="checkbox" class="switch"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-box-wrapper">
+                    <div id="chat-box" style="top:400px">
+                        <div class="chat-box-header"><a href="#" class="chat-box-close pull-right mlm"><i
+                                class="fa fa-times"></i></a><a href="#" class="chat-box-minimize-btn pull-right"><i
+                                class="fa fa-chevron-down"></i></a><span class="user-status is-online"></span><span
+                                class="display-name">Willard Mckenzie</span></div>
+                        <div class="chat-content">
+                            <ul class="chat-box-body">
+                                <li><p><img src="http://api.randomuser.me/portraits/men/27.jpg" class="avt"/><span
+                                        class="user">You</span><span class="time">08:44</span></p>
+
+                                    <p>Hi, we have some ideas for this template</p></li>
+                                <li class="odd"><p><img
+                                        src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg"
+                                        class="avt"/><span class="user">Jake Rochleau</span><span
+                                        class="time">08:45</span></p>
+
+                                    <p>Great! Let tell us now...</p></li>
+                            </ul>
+                        </div>
+                        <div class="chat-textarea"><input placeholder="Type text and press Enter" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="chat-box-minimize"><img
+                            src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg"
+                            data-pulsate="{border:false,speed:200,reach: 50}" class="img-circle"/><span
+                            class="user-status is-online"></span></div>
+                </div>
+            </div>
+            <!--END CHAT FORM--><!--BEGIN PAGE CONTENT-->
+            <div class="page-content"><!--BEGIN TITLE & BREADCRUMB PAGE-->
+                <div class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">Empleados</div>
+                      
+                    </div>
+                 
+                   
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <div class="box-content"><!--BEGIN CONTENT-->
+                  <div class="content">
+                   <div class="page-profile">
+              
+                        <div class="row">
+                        
+                        <div class="col-md-12">
+                                <div class="panel">
+                                  <div class="panel-body">
+                                      <div class="row mbm">
+                                            <div class="col-md12">
+                                                <div id="viewcode-table-advanced" class="viewcode-example">
+                                                    <div class="table-responsive">
+                                                        <table id="table_id"
+                                                               class="table table-hover table-striped table-advanced">
+                                                            <thead>
+                                                            <tr>
+                                                                <th style="width: 3%; padding: 5px 10px;"><input
+                                                                        type="checkbox" class="checkall"/></th>
+                                                                <th width="9%">Rec #</th>
+                                                                <th>Nombre</th>
+                                                                <th width="10%">Apellido</th>
+                                                                <th width="10%">Ciudad</th>
+                                                                <th width="10%">Region</th>
+                                                                <th width="7%">Cuadrilla</th>
+                                                                <th width="12%">Fecha</th>
+                                                                <th width="10%">Presupuesto</th>
+                                                                <th width="9%">Status</th>
+                                                                <th width="12%">Aciones</th>
+                                                            </tr>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>1</td>
+                                                                <td>Henry</td>
+                                                                <td>Calderon</td>
+                                                                <td>England</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$112.40</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>2</td>
+                                                                <td>Melinda</td>
+                                                                <td>Hernandez</td>
+                                                                <td>Germany</td>
+                                                                <td>Female</td>
+                                                                <td>45</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-info">Pending</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>18</td>
+                                                                <td>Joh Doe</td>
+                                                                <td>Colosio</td>
+                                                                <td>England</td>
+                                                                <td>Male</td>
+                                                                <td>40</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-warning">Suspended</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>19</td>
+                                                                <td>Lahm</td>
+                                                                <td>Pacheco</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>15</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-danger">Blocked</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Henry</td>
+                                                                <td>Calderon</td>
+                                                                <td>France</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Henry</td>
+                                                                <td>Hernandez</td>
+                                                                <td>France</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Jane</td>
+                                                                <td>Colosio</td>
+                                                                <td>England</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>3</td>
+                                                                <td>Larry</td>
+                                                                <td>Pacheco</td>
+                                                                <td>England</td>
+                                                                <td>Female</td>
+                                                                <td>40</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$112.40</td>
+                                                                <td><span
+                                                                        class="label label-sm label-warning">Suspended</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>4</td>
+                                                                <td>Melinda</td>
+                                                                <td>Calderon</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>15</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$123.40</td>
+                                                                <td><span
+                                                                        class="label label-sm label-danger">Blocked</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>5</td>
+                                                                <td>Henry</td>
+                                                                <td>Hernandez</td>
+                                                                <td>United States</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>6</td>
+                                                                <td>Melinda</td>
+                                                                <td>Colosio</td>
+                                                                <td>Brazil</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>7</td>
+                                                                <td>John</td>
+                                                                <td>Pacheco</td>
+                                                                <td>England</td>
+                                                                <td>Female</td>
+                                                                <td>45</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-info">Pending</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>8</td>
+                                                                <td>Larry</td>
+                                                                <td>Calderon</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>40</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-warning">Suspended</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>9</td>
+                                                                <td>Lahm</td>
+                                                                <td>Hernandez</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>15</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-danger">Blocked</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>10</td>
+                                                                <td>Melinda</td>
+                                                                <td>Colosio</td>
+                                                                <td>Germany</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>11</td>
+                                                                <td>Henry</td>
+                                                                <td>Pacheco</td>
+                                                                <td>England</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>12</td>
+                                                                <td>John</td>
+                                                                <td>Calderon</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>45</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-info">Pending</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>13</td>
+                                                                <td>Larry</td>
+                                                                <td>Hernandez</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>40</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-warning">Suspended</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>14</td>
+                                                                <td>Lahm</td>
+                                                                <td>Colosio</td>
+                                                                <td>Germany</td>
+                                                                <td>Female</td>
+                                                                <td>15</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-danger">Blocked</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>15</td>
+                                                                <td>Henry</td>
+                                                                <td>Pacheco</td>
+                                                                <td>Japan</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>16</td>
+                                                                <td>Henry</td>
+                                                                <td>Calderon</td>
+                                                                <td>United States</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>17</td>
+                                                                <td>Melinda</td>
+                                                                <td>Hernandez</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>45</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-info">Pending</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>18</td>
+                                                                <td>Luan</td>
+                                                                <td>Colosio</td>
+                                                                <td>VietNam</td>
+                                                                <td>Male</td>
+                                                                <td>40</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-warning">Suspended</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>19</td>
+                                                                <td>Lahm</td>
+                                                                <td>Pacheco</td>
+                                                                <td>United States</td>
+                                                                <td>Female</td>
+                                                                <td>15</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-danger">Blocked</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Henry</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>France</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-1999</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Henry</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>France</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>20-05-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"/></td>
+                                                                <td>20</td>
+                                                                <td>Jane</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>England</td>
+                                                                <td>Male</td>
+                                                                <td>32</td>
+                                                                <td>21-09-2014</td>
+                                                                <td>$240.50</td>
+                                                                <td><span
+                                                                        class="label label-sm label-success">Approved</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                            class="btn btn-default btn-xs"><i
+                                                                            class="fa fa-edit"></i>&nbsp;
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                            </thead></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          </div>
+                                </div></div>
+                    </div>
+                    <!--END CONTENT--></div>
+            </div>
+            <!--END PAGE CONTENT--></div>
+        <!--END PAGE WRAPPER--></div>
+    <!--BEGIN FOOTER-->
+    <div id="footer">
+        <div class="copyright"> Desarrollado por: StudioMedia Agency
+            <div class="pull-left">©2015 - Construcion Specialties System Control</div>
+        </div>
+    </div>
+    <!--END FOOTER--></div>
+<script src="global/js/jquery-1.10.2.min.js"></script>
+<script src="global/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="global/js/jquery-ui.js"></script>
+<script src="global/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="global/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="global/js/html5shiv.js"></script>
+<script src="global/js/respond.min.js"></script>
+<script src="global/vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="global/vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="global/vendors/iCheck/icheck.min.js"></script>
+<script src="global/vendors/iCheck/custom.min.js"></script>
+<script src="assets/vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="assets/vendors/google-code-prettify/prettify.js"></script>
+<script src="assets/vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="assets/vendors/jquery.pulsate.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="assets/vendors/jquery-jvectormap/jquery-jvectormap-2.0.1.min.js"></script>
+<script src="assets/vendors/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="assets/vendors/jquery-jvectormap/jquery-jvectormap-us-lcc-en.js"></script>
+<script src="assets/vendors/jquery-jvectormap/gdp-data.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.categories.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.pie.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.tooltip.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.resize.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.fillbetween.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.stack.js"></script>
+<script src="assets/vendors/flot-chart/jquery.flot.spline.js"></script>
+<script src="assets/vendors/jquery-animateNumber/jquery.animateNumber.min.js"></script>
+<script src="assets/vendors/jquery.sparkline.min.js"></script>
+<script src="assets/vendors/skycons/skycons.js"></script>
+<script src="assets/js/index.js"></script>
+<!--CORE JAVASCRIPT-->
+<script src="global/js/core.js"></script>
+<script src="assets/js/system-layout.js"></script>
+<script src="assets/js/jquery-responsive.js"></script>
+<script>jQuery(document).ready(function () {
+    "use strict";
+    JQueryResponsive.init();
+    Layout.init();
+});
+</script>
+<script>jQuery(document).ready(function () {
+    index.init();
+});
+
+
+</script>
+</body>
+</html>
