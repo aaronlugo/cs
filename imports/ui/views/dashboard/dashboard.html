@@ -1,54 +1,8 @@
-<template name="home">
+<template name="dashboard">
   <div id="wrapper">
     <!--BEGIN PAGE WRAPPER-->
     <div id="page-wrapper">
-      <!--BEGIN SIDEBAR MAIN-->
-      <div class="sidebar-main sidebar">
-        <div class="sidebar-collapse sidebar-scroll">
-          <ul id="sidebar-main" class="nav">
-
-            <li class="sidebar-hide">
-              <h4 class="sidebar-title-section">Menu</h4>
-            </li>
-            <li class="active"><a href="index.html"><i class="icon-home"></i><span class="menu-title">Inicio</span></a>
-            </li>
-            <li><a href="perfil.html"><i class="icon-user"></i><span class="menu-title">Mi Perfil</span></a></li>
-
-            <li><a href="calendario.html"><i class="icon-calendar"></i><span class="menu-title">Calendario</span></a></li>
-
-
-            <li><a href="#"><i class="icon-users"></i><span
-                              class="menu-title">Usuarios</span><span class="arrow"></span></a></li>
-
-
-            <li><a href="empleados.html"><i class="icon-wrench"></i><span class="menu-title">Empleados</span><span
-                              class="arrow"></span></a>
-
-            </li>
-            <li><a href="#"><i class="icon-speedometer"></i><span class="menu-title">Cuadrillas</span><span
-                              class="arrow"></span></a>
-
-            </li>
-            <li><a href="ordenes.html"><i class="icon-list"></i><span class="menu-title">Ordenes</span><span
-                              class="arrow"></span></a>
-
-            </li>
-            <li><a href="#"><i class="icon-user-following"></i><span class="menu-title">Clientes</span><span
-                              class="arrow"></span></a>
-
-            </li>
-            <li><a href="#"><i class="icon-bar-chart"></i><span class="menu-title">Reportes</span><span
-                              class="arrow"></span></a>
-
-            </li>
-            <li><a href="#"><i class="icon-book-open"></i><span class="menu-title">Mapa</span><span
-                              class="arrow"></span></a>
-
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--END SIDEBAR MAIN-->
+      {{> sidebar}}
       <!--BEGIN CHAT FORM-->
       <div class="chat-form-wrapper">
         <div id="chat-form">

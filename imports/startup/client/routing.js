@@ -4,7 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout'
 import '/imports/ui/layouts/masterLayout.js';
 import '/imports/ui/layouts/nonLoggedinLayout.html';
 import '/imports/ui/views/login/login.js';
-import '/imports/ui/views/home/home.js';
+import '/imports/ui/views/dashboard/dashboard.js';
 
 FlowRouter.route('/login', {
   name:'login',
@@ -15,11 +15,11 @@ FlowRouter.route('/login', {
   }
 });
 
-FlowRouter.route('/', {
+FlowRouter.route('/dashboard', {
   name:'home',
   action: () => {
     BlazeLayout.render("masterLayout", {
-      view: "home"
+      view: "dashboard"
     });
   }
 });
