@@ -1,0 +1,43 @@
+<template name="login">
+  <div class="page-form">
+    <form action="index.html" class="form">
+      <div class="header-content text-center">
+        <img src="/images/logo.png" />
+      </div>
+
+      <div class="body-content">
+        <div role="alert" class="alert alert-danger alert-dismissible alert-custom hide">
+          <button type="button" data-dismiss="alert" class="close">
+            <span>&times;</span>
+          </button>
+          Ingrese su correo y password.
+        </div>
+        <div class="list-group">
+          <div class="list-group-item">
+            <input type="text" placeholder="Username" class="form-control">
+          </div>
+          <div class="list-group-item">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+        </div>
+        <div class="form-group pull-left">
+          <label>
+            <input type="checkbox" class="form-control-shadow">&nbsp; Recordarme
+          </label>
+        </div>
+        <div class="form-group pull-right"><a href="#" class="btn-link">Olvido su password?</a></div>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div class="col-sm-12" align="center">
+
+            <button type="submit" class="btn btn-info btn-circle btn-block btn-shadow mbs">Log in</button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <p>Desarrollado por: <a id="btn-register" href="#" class="btn-link">StudioMedia</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

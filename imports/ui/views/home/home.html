@@ -1,0 +1,453 @@
+<template name="home">
+  <div id="wrapper">
+    <!--BEGIN PAGE WRAPPER-->
+    <div id="page-wrapper">
+      <!--BEGIN SIDEBAR MAIN-->
+      <div class="sidebar-main sidebar">
+        <div class="sidebar-collapse sidebar-scroll">
+          <ul id="sidebar-main" class="nav">
+
+            <li class="sidebar-hide">
+              <h4 class="sidebar-title-section">Menu</h4>
+            </li>
+            <li class="active"><a href="index.html"><i class="icon-home"></i><span class="menu-title">Inicio</span></a>
+            </li>
+            <li><a href="perfil.html"><i class="icon-user"></i><span class="menu-title">Mi Perfil</span></a></li>
+
+            <li><a href="calendario.html"><i class="icon-calendar"></i><span class="menu-title">Calendario</span></a></li>
+
+
+            <li><a href="#"><i class="icon-users"></i><span
+                              class="menu-title">Usuarios</span><span class="arrow"></span></a></li>
+
+
+            <li><a href="empleados.html"><i class="icon-wrench"></i><span class="menu-title">Empleados</span><span
+                              class="arrow"></span></a>
+
+            </li>
+            <li><a href="#"><i class="icon-speedometer"></i><span class="menu-title">Cuadrillas</span><span
+                              class="arrow"></span></a>
+
+            </li>
+            <li><a href="ordenes.html"><i class="icon-list"></i><span class="menu-title">Ordenes</span><span
+                              class="arrow"></span></a>
+
+            </li>
+            <li><a href="#"><i class="icon-user-following"></i><span class="menu-title">Clientes</span><span
+                              class="arrow"></span></a>
+
+            </li>
+            <li><a href="#"><i class="icon-bar-chart"></i><span class="menu-title">Reportes</span><span
+                              class="arrow"></span></a>
+
+            </li>
+            <li><a href="#"><i class="icon-book-open"></i><span class="menu-title">Mapa</span><span
+                              class="arrow"></span></a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--END SIDEBAR MAIN-->
+      <!--BEGIN CHAT FORM-->
+      <div class="chat-form-wrapper">
+        <div id="chat-form">
+          <div class="chat-inner">
+            <h2 class="chat-header"><a href="javascript:;" class="chat-form-close pull-right"><i
+                          class="fa fa-times"></i></a><i class="fa fa-user"></i>&nbsp; Active Chat &nbsp;
+              <span class="badge badge-success">5</span>
+            </h2>
+
+            <div id="group-1" class="chat-group">
+              <h4 class="group-title">Recently</h4>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg" class="avt" />
+                <span class="user-status is-online"></span>
+                <small>Judy Russell</small>
+                <span class="badge badge-info">2</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/48.jpg" class="avt" />
+                <span class="user-status is-online"></span>
+                <small>Eugene Turner</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/48.jpg" class="avt" />
+                <span class="user-status is-busy"></span>
+                <small>Ann Porter</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jackmcdade/48.jpg" class="avt" />
+                <span class="user-status is-idle"></span>
+                <small>Benjamin Howell</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+            </div>
+            <div id="group-2" class="chat-group">
+              <h4 class="group-title">Work</h4>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/oliveirasimoes/48.jpg" class="avt" />
+                <span class="user-status is-busy"></span>
+                <small>Lawrence Larson</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg" class="avt" />
+                <span class="user-status is-offline"></span>
+                <small>Jacqueline Howell</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jackmcdade/48.jpg" class="avt" />
+                <span class="user-status is-offline"></span>
+                <small>Andrew Brewer</small>
+                <span class="badge badge-info">1</span>
+              </a>
+            </div>
+            <div id="group-3" class="chat-group">
+              <h4 class="group-title">Friends</h4>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg" class="avt" />
+                <span class="user-status is-online"></span>
+                <small>Marilyn Romero</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/48.jpg" class="avt" />
+                <span class="user-status is-busy"></span>
+                <small>Philip Hall</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+              <a href="#">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/48.jpg" class="avt" />
+                <span class="user-status is-offline"></span>
+                <small>Gary Wells</small>
+                <span class="badge badge-info is-hidden">0</span>
+              </a>
+            </div>
+            <div class="chat-theme-setting text-right">
+              <div id="setting-theme-chat" data-on-label="dark" data-off-label="light" class="make-switch">
+                <input type="checkbox" class="switch" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box-wrapper">
+          <div id="chat-box" style="top:400px">
+            <div class="chat-box-header"><a href="#" class="chat-box-close pull-right mlm"><i
+                              class="fa fa-times"></i></a><a href="#" class="chat-box-minimize-btn pull-right"><i
+                              class="fa fa-chevron-down"></i></a>
+              <span class="user-status is-online"></span>
+              <span class="display-name">Willard Mckenzie</span>
+            </div>
+            <div class="chat-content">
+              <ul class="chat-box-body">
+                <li>
+                  <p>
+                    <img src="http://api.randomuser.me/portraits/men/27.jpg" class="avt" />
+                    <span class="user">You</span>
+                    <span class="time">08:44</span>
+                  </p>
+
+                  <p>Hi, we have some ideas for this template</p>
+                </li>
+                <li class="odd">
+                  <p>
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg" class="avt" />
+                    <span class="user">Jake Rochleau</span>
+                    <span class="time">08:45</span>
+                  </p>
+
+                  <p>Great! Let tell us now...</p>
+                </li>
+              </ul>
+            </div>
+            <div class="chat-textarea">
+              <input placeholder="Type text and press Enter" class="form-control" />
+            </div>
+          </div>
+          <div class="chat-box-minimize">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg" data-pulsate="{border:false,speed:200,reach: 50}" class="img-circle" />
+            <span class="user-status is-online"></span>
+          </div>
+        </div>
+      </div>
+      <!--END CHAT FORM-->
+      <!--BEGIN PAGE CONTENT-->
+      <div class="page-content">
+        <!--BEGIN TITLE & BREADCRUMB PAGE-->
+        <div class="page-title-breadcrumb">
+          <div class="page-header pull-left">
+            <div class="page-title">Bienvenido / CS CONTROL SYSTEM</div>
+
+          </div>
+
+
+        </div>
+        <!--END TITLE & BREADCRUMB PAGE-->
+        <div class="box-content">
+          <!--BEGIN CONTENT-->
+          <div class="content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="panel">
+                  <div class="panel-body">
+                    <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="http://tipdiario.com/wp-content/uploads/alcanzar-el-exito-y-desarrollo-personal.jpg" alt="" />
+
+                          <div class="carousel-caption">
+                            <p>Éxito es igual a metas; todo lo demás son solo comentarios.</p>
+                            <small><i>Brian Tracy</i></small>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="http://tipdiario.com/wp-content/uploads/alcanzar-el-exito-y-desarrollo-personal.jpg" alt="" />
+
+                          <div class="carousel-caption">
+                            <p>Todos necesitamos metas poderosas a largo plazo para ayudarnos a superar los obstáculos de corto plazo.</p>
+                            <small><i>Jim Rohn</i></small>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control">
+                        <span class="icon-arrow-left"></span>
+                      </a>
+                      <a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control">
+                        <span class="icon-arrow-right"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-body">Monthly Service Confirmations
+                    <span class="pull-right">
+                      <span id='new-customer-number' style="font-size: 24px;"></span>
+                    </span>
+
+                    <div id="new-customer-chart" style="width: 100%; height:100px" class="mtl"></div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-body">Monthly Services Planned vs. Fulfilled
+                    <span style="font-size: 24px;" class="pull-right">Total:
+                      <span id='earning-number'></span>
+                    </span>
+
+                    <div id="earning-chart" style="width: 100%; height:100px" class="mtl"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                  <div class="panel-body">
+                    <div id="placeholder" style="width: 100%; height:150px" class="demo-placeholder"></div>
+                    <div class="section section-info">
+                      <span class="info-time">Today 2:25 PM</span>
+
+                      <h3 class="info-title">Estadisticas Generales</h3>
+
+                      <div class="info-block">
+                        <dl>
+                          <dt>130</dt>
+                          <dd>Empleados</dd>
+                        </dl>
+                      </div>
+                      <div class="info-block last">
+                        <dl>
+                          <dt>14</dt>
+                          <dd>Cuadrillas</dd>
+                        </dl>
+                      </div>
+
+
+                      <div class="info-block">
+                        <dl>
+                          <dt>130</dt>
+                          <dd>Empleados</dd>
+                        </dl>
+                      </div>
+                      <div class="info-block last">
+                        <dl>
+                          <dt>14</dt>
+                          <dd>Cuadrillas</dd>
+                        </dl>
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="panel">
+                  <div class="panel-body">
+                    <h3 class="info-title mtn">CUADRILLAS </h3>
+                    <small>Localizacion de proyectos</small>
+                    <div class="row mtl">
+                      <div class="col-md-4">
+                        <div id="map-visitor-chart" style="width: 100%; height:200px"></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div id="map-visitor-markers" style="width: 100%; height: 300px"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="widget-weather">
+                  <div class="widget-header">
+                    <h5>Mexico DF
+                      <span class="caret mls"></span>
+                    </h5>
+                  </div>
+                  <div class="widget-body">
+                    <div class="date">
+                      <p>Dec, 10 - Monday</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7">
+                        <p class="time">12:30
+                          <span>PM</span>
+                        </p>
+
+                        <div class="stats">
+                          <p>Wind:
+                            <span class="text-success">6 mph NE</span>
+                          </p>
+
+                          <p>Humidity
+                            <span>%</span>
+                            <span id="number-humidity" class="text-pink">88</span>
+                          </p>
+
+                          <p>Sunrise:
+                            <span>6:30 AM</span>
+                          </p>
+
+                          <p>Sunset
+                            <span>5:40 PM</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-xs-5">
+                        <canvas id="icon1" width="60px" height="60px"></canvas>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="items">
+                        <div class="item col-xs-3">
+                          <p>France</p>
+                          <canvas id="icon2" width="30px" height="30px"></canvas>
+                          <p class="value">14°C</p>
+                        </div>
+                        <div class="item col-xs-3">
+                          <p>Italia</p>
+                          <canvas id="icon3" width="30px" height="30px"></canvas>
+                          <p class="value">20°C</p>
+                        </div>
+                        <div class="item col-xs-3">
+                          <p>India</p>
+                          <canvas id="icon4" width="30px" height="30px"></canvas>
+                          <p class="value">25°C</p>
+                        </div>
+                        <div class="item col-xs-3">
+                          <p>England</p>
+                          <canvas id="icon5" width="30px" height="30px"></canvas>
+                          <p class="value">30°C</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mbl">
+              <div class="col-md-12">
+                <div class="panel">
+                  <div class="panel-body">
+                    <h3 class="info-title mtn">PROYECTOS </h3>
+                    <small>Status de Proyectos</small>
+                    <div class="table-responsive mtl">
+                      <table class="table table-border-dashed table-hover">
+                        <thead>
+                          <tr>
+                            <th>Proyecto </th>
+                            <th>Presupuesto</th>
+                            <th>Porcentaje de avanze</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>ZIWA DESIGN CONSTRUCTION MANAGER</td>
+                            <td>2.346</td>
+                            <td>
+                              <div data-hover="tooltip" title="80%" class="progress progress-xs mtm mbm">
+                                <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-success">
+                                  <span class="sr-only">80% Complete</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>URBANIZACIONES SAN RAFAEL SA DE CV</td>
+                            <td>1.320</td>
+                            <td>
+                              <div data-hover="tooltip" title="85%" class="progress progress-xs mtm mbm">
+                                <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" class="progress-bar progress-bar-info">
+                                  <span class="sr-only">85% Complete</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PAYCO FOODS CORP</td>
+                            <td>4.780</td>
+                            <td>
+                              <div data-hover="tooltip" title="90%" class="progress progress-xs mtm mbm">
+                                <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar progress-bar-danger">
+                                  <span class="sr-only">90% Complete</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>SUPERMERCADOS INTERNACIONALES HEB</td>
+                            <td>7.884</td>
+                            <td>
+                              <div data-hover="tooltip" title="60%" class="progress progress-xs mtm mbm">
+                                <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-warning">
+                                  <span class="sr-only">60% Complete</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--END CONTENT-->
+        </div>
+      </div>
+      <!--END PAGE CONTENT-->
+    </div>
+    <!--END PAGE WRAPPER-->
+  </div>
+</template>
