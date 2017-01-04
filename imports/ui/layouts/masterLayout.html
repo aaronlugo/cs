@@ -15,8 +15,15 @@
     </div>
     {{> navbar}}
     <div class="fluid">
+      <div id="wrapper">
+        <!--BEGIN PAGE WRAPPER-->
+        <div id="page-wrapper">
+          {{>sidebar}}
+          {{> Template.dynamic template = view}}
+        </div>
+        <!--END PAGE WRAPPER-->
+      </div>
         <!--BEGIN TEMPLATE SETTING-->
-        {{> Template.dynamic template = view}}
         <!--BEGIN FOOTER-->
         <div id="footer">
             <div class="copyright"> Desarrollado por: StudioMedia Agency
