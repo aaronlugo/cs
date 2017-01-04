@@ -33,8 +33,8 @@ const dashboardRoutes = FlowRouter.group({
   name: 'dashboard'
 });
 
-dashboardRoutes.route('/main', {
-  name:'employesView',
+dashboardRoutes.route('/', {
+  name:'dashboard',
   action: () => {
     BlazeLayout.render("masterLayout", {
       view: "dashboard"
