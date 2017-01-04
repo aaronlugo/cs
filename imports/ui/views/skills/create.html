@@ -1,3 +1,44 @@
 <template name="skillsCreate">
-  Hola soy skillsCreate
+  <div class="page-content">
+      <!--BEGIN TITLE & BREADCRUMB PAGE-->
+      <div class="page-title-breadcrumb">
+          <div class="page-header pull-left">
+              <div class="page-title">
+                  Skills
+              </div>
+
+          </div>
+
+
+      </div>
+      <!--END TITLE & BREADCRUMB PAGE-->
+      <div class="box-content">
+          <!--BEGIN CONTENT-->
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="panel">
+                      <div class="panel-heading">
+                          <div class="caption">Create Skill</div>
+                      </div>
+                      <div class="panel-body">
+                        <form accept-charset="UTF-8" class="form-horizontal form-seperated">
+                          <div class="form-body">
+                            <div class="form-group">
+                              <label for="name" class="col-md-3 control-label">Skill: </label>
+                              <div class="col-md-6"><input class="form-control" name="name" type="text" id="skill">
+                            </div>
+                            </div>
+                            <input class="btn btn-success" type="submit" value="Save">
+                            <a href="{{pathFor '/dashboard'}}" class="btn btn-icon btn-default glyphicons circle_remove">Cancel</a>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--END CONTENT-->
+      </div>
+  </div>
+
+
 </template>
