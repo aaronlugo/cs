@@ -16,10 +16,10 @@
                 <a data-toggle="collapse" data-parent="#sidebar-main" href="#employees" aria-expanded="true" aria-controls="employees"><i class="icon-users"></i><span class="menu-title">Employees</span><span class="arrow"></span></a>
                 <ul class="nav nav-second-level collapse" id="employees">
                     <li>
-                        <a href="/employes/view"><span class="submenu-title">View</span></a>
+                        <a href={{pathFor '/employes/view'}}><span class="submenu-title">View</span></a>
                     </li>
                     <li>
-                        <a href="/employes/create"><span class="submenu-title">Create</span></a>
+                        <a href="{{pathFor '/employes/create'}}"><span class="submenu-title">Create</span></a>
                     </li>
                 </ul>
             </li>
@@ -27,10 +27,10 @@
               <a data-toggle="collapse" data-parent="#sidebar-main" href="#skills"><i class="icon-users"></i><span class="menu-title">Skills</span><span class="arrow"></span></a>
               <ul class="nav nav-second-level collapse" id="skills">
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/skills"><span class="submenu-title">View</span></a>
+                      <a href="{{pathFor '/skills/view'}}"><span class="submenu-title">View</span></a>
                   </li>
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/skills/create"><span class="submenu-title">Create</span></a>
+                      <a href="{{pathFor '/skills/create'}}"><span class="submenu-title">Create</span></a>
                   </li>
               </ul>
           </li>
@@ -38,10 +38,10 @@
               <a data-toggle="collapse" data-parent="#sidebar-main" href="#cuadrillas"><i class="icon-users"></i><span class="menu-title">Cuadrillas</span><span class="arrow"></span></a>
               <ul class="nav nav-second-level collapse" id="cuadrillas">
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/cuadrillas"><span class="submenu-title">View</span></a>
+                      <a href="{{pathFor '/cuadrillas/view'}}"><span class="submenu-title">View</span></a>
                   </li>
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/cuadrillas/create"><span class="submenu-title">Create</span></a>
+                      <a href="{{pathFor '/cuadrillas/create'}}"><span class="submenu-title">Create</span></a>
                   </li>
               </ul>
           </li>
@@ -49,16 +49,16 @@
               <a data-toggle="collapse" data-parent="#sidebar-main" href="#proyectos"><i class="icon-users"></i><span class="menu-title">Proyectos</span><span class="arrow"></span></a>
               <ul class="nav nav-second-level collapse" style="height: 0px;" id="proyectos">
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/proyectos"><span class="submenu-title">View</span></a>
+                      <a href="{{pathFor '/proyectos/view'}}"><span class="submenu-title">View</span></a>
                   </li>
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/proyectos/create"><span class="submenu-title">Create</span></a>
+                      <a href="{{pathFor '/skills/create'}}"><span class="submenu-title">Create</span></a>
                   </li>
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/proyectos/show/calendario"><span class="submenu-title">Calendario Proyectos</span></a>
+                      <a href="{{pathFor '/skills/create'}}"><span class="submenu-title">Calendario Proyectos</span></a>
                   </li>
                   <li>
-                      <a href="http://studiomediaagency.com/clients/cs/proyectos/show/gantt"><span class="submenu-title">Calendario Cuadrillas</span></a>
+                      <a href="{{pathFor '/skills/create'}}"><span class="submenu-title">Calendario Cuadrillas</span></a>
                   </li>
               </ul>
           </li>
