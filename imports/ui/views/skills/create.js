@@ -1,4 +1,4 @@
-import Skills from '/imports/api/collections/skills.js'
+import { Skills } from '/imports/api/collections';
 import './create.html';
 
 Forms.mixin(Template.skillsCreate);
